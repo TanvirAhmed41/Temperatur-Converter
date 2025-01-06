@@ -11,9 +11,14 @@ class Test {
        Console.Write("Enter Fahrenheit Temperature: ");
        Fahrenheit = Convert.ToDouble(Console.ReadLine());
 
-       celsius = (Fahrenheit - 32)/1.8 ;
+       Console.Write("Enter Celsius Temperature: ");
+       celsius = Convert.ToDouble(Console.ReadLine());
 
-       Console.WriteLine ($"Temperature in Celsius = {celsius.ToString("F2")}");
+       celsius = (Fahrenheit - 32)/1.8 ;
+       Fahrenheit = (1.8 * celsius)+32 ;
+
+       Console.WriteLine ($"Temperature in Celsius = {celsius.ToString("F2")} C");
+       Console.WriteLine ($"Temperature in Fahrenheit = {Fahrenheit.ToString("F2")} F");
 
 
     }
